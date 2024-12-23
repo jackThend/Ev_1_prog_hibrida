@@ -3,12 +3,17 @@
     <ion-card-title>Triángulo</ion-card-title>
   </ion-card-header>
   <ion-card-content>
+    <p>El perímetro de un triángulo es la suma de las longitudes de sus tres lados.</p>
+    <p>
+      <b>Fórmula:</b> <br>
+      p = a + b + c
+    </p>
+    <img src="assets/images/triangulo.png" alt="Diagrama de un triángulo" class="image-small">
     <p>Ingrese los lados del triángulo:</p>
     <ion-input [(ngModel)]="ladoA" type="number" placeholder="Lado A (cm)"></ion-input>
     <ion-input [(ngModel)]="ladoB" type="number" placeholder="Lado B (cm)"></ion-input>
     <ion-input [(ngModel)]="ladoC" type="number" placeholder="Lado C (cm)"></ion-input>
     <ion-button expand="block" (click)="calcular()">Calcular Perímetro</ion-button>
     <p *ngIf="resultado !== null">El perímetro es {{ resultado }} cm</p>
-    <p *ngIf="resultado === null">Por favor, ingrese valores válidos para todos los lados.</p>
   </ion-card-content>
 </ion-card>
